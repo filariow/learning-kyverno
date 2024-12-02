@@ -14,7 +14,11 @@ helm install kyverno kyverno/kyverno \
   --values ./kyverno-values.yaml
 
 # wait for kyverno to be rolled out
-kubectl rollout status -n kyverno deployment --timeout 300s kyverno-admission-controller 
-kubectl rollout status -n kyverno deployment --timeout 300s kyverno-background-controller
-kubectl rollout status -n kyverno deployment --timeout 300s kyverno-cleanup-controller
-kubectl rollout status -n kyverno deployment --timeout 300s kyverno-reports-controller
+kubectl rollout status -n kyverno deployment \
+  --timeout 300s kyverno-admission-controller 
+kubectl rollout status -n kyverno deployment \
+  --timeout 300s kyverno-background-controller
+kubectl rollout status -n kyverno deployment \
+  --timeout 300s kyverno-cleanup-controller
+kubectl rollout status -n kyverno deployment \
+  --timeout 300s kyverno-reports-controller

@@ -18,7 +18,7 @@ echo ""
 __print_title "let's now add a mutate cluster policy"
 read -r 
 
-( set -x; kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/other/add-labels/add-labels.yaml -o yaml; )
+( set -x; kubectl create -f https://raw.githubusercontent.com/kyverno/policies/main/other/add-labels/add-labels.yaml -o yaml; )
 echo ""
 ( set -x; kubectl get clusterpolicies.kyverno.io; )
 echo ""
